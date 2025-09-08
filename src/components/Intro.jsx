@@ -33,7 +33,7 @@ const Intro = () => {
             thinking that make a difference.
             <br />
             <br />
-            <span className="italic text-blue-700">
+            <span className="italic text-blue-700 font-semibold">
               Let’s grow your brand together — one click at a time.
             </span>
           </p>
