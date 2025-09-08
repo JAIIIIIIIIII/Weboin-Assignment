@@ -62,7 +62,7 @@ const PortfolioPreview = () => {
             className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
           >
             <img src={image} alt={title} className="w-full h-48 object-cover" />
-            <div className="p-5" bg->
+            <div className="p-5">
               <h3 className="text-xl text-gray-600x font-semibold mb-2">
                 {title}
               </h3>
