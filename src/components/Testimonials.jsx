@@ -36,7 +36,7 @@ const TestimonialSection = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const skeletonArray = Array(3).fill(null);
+  const skeletonArray = Array(testimonials.length).fill(null);
 
   return (
     <section className="p-10 max-w-6xl mx-auto bg-gray-100 dark:bg-gray-700 rounded-lg my-10 transition-colors duration-500">
