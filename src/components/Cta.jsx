@@ -25,9 +25,7 @@ const CTASection = () => (
         </a>
       </div>
 
-      {/* Contact & Social */}
       <div className="flex flex-col sm:flex-row justify-center gap-12 text-indigo-200 text-sm font-medium">
-        {/* Phone */}
         <a
           href="tel:+1234567890"
           className="flex items-center gap-2 hover:text-white transition"
@@ -35,7 +33,6 @@ const CTASection = () => (
           <FaPhoneAlt /> +91 9123456780
         </a>
 
-        {/* Email */}
         <a
           href="mailto:hello@company.com"
           className="flex items-center gap-2 hover:text-white transition"
@@ -43,7 +40,6 @@ const CTASection = () => (
           <FaEnvelope /> hello@weboin.com
         </a>
 
-        {/* Instagram */}
         <a
           href="https://www.instagram.com/weboin/#"
           target="_blank"
@@ -53,7 +49,6 @@ const CTASection = () => (
           <FaInstagram /> Instagram
         </a>
 
-        {/* Facebook */}
         <a
           href="https://www.facebook.com/weboin"
           target="_blank"

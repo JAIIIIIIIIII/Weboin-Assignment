@@ -32,7 +32,6 @@ const TestimonialSection = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate API delay
     const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);

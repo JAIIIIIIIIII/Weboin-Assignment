@@ -23,7 +23,6 @@ const Hero = () => {
           </HashLink>
         </div>
 
-        {/* Image Section */}
         <div className="w-full  max-w-md md:max-w-lg">
           <img
             src="https://images.pexels.com/photos/3194519/pexels-photo-3194519.jpeg?cs=srgb&dl=pexels-canvastudio-3194519.jpg&fm=jpg"

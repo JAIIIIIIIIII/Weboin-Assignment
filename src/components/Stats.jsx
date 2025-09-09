@@ -78,6 +78,7 @@ const Stats = () => {
         <h2 className="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">
           Company Stats
         </h2>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map((stat, index) => (
             <div
@@ -98,12 +99,12 @@ const Stats = () => {
             </div>
           ))}
         </div>
+
         <h2 className="text-3xl font-bold text-center mt-10 mb-12 text-gray-800 dark:text-white">
           Growth Journey Year by Year
         </h2>
 
         <div className="relative">
-          {/* Center Vertical Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-0.5 h-full bg-gray-300 dark:bg-gray-600 z-0" />
 
           <div className="space-y-16">
@@ -117,10 +118,12 @@ const Stats = () => {
                     isLeft ? "md:justify-start" : "md:justify-end"
                   }`}
                 >
-                  <div className="absolute left-1/2 top-2 w-6 h-6 bg-indigo-600 rounded-full ring-4 ring-white dark:ring-gray-700 z-10 transform -translate-x-1/2" />
+                  <div className="hidden md:block absolute left-1/2 top-2 w-6 h-6 bg-indigo-600 rounded-full ring-4 ring-white dark:ring-gray-700 z-10 transform -translate-x-1/2" />
+                  <div className="block md:hidden mb-4 mx-auto w-4 h-4 bg-indigo-600 rounded-full ring-2 ring-white dark:ring-gray-700" />
+
                   {isLeft ? (
                     <>
-                      <div className="w-full md:w-1/2 pr-6 md:text-right mb-6 md:mb-0">
+                      <div className="hidden md:block w-full md:w-1/2 pr-6 md:text-right mb-6 md:mb-0">
                         <div className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg shadow">
                           <h4 className="text-md font-semibold text-indigo-600 mb-2">
                             About {stat.year}
@@ -158,6 +161,17 @@ const Stats = () => {
                             </ul>
                           </div>
                         </div>
+
+                        <div className="md:hidden mt-4">
+                          <div className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg shadow">
+                            <h4 className="text-md font-semibold text-indigo-600 mb-2">
+                              About {stat.year}
+                            </h4>
+                            <p className="text-sm text-gray-700 dark:text-gray-300">
+                              {stat.detail}
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </>
                   ) : (
@@ -189,9 +203,20 @@ const Stats = () => {
                             </ul>
                           </div>
                         </div>
+
+                        <div className="md:hidden mt-4">
+                          <div className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg shadow">
+                            <h4 className="text-md font-semibold text-indigo-600 mb-2">
+                              About {stat.year}
+                            </h4>
+                            <p className="text-sm text-gray-700 dark:text-gray-300">
+                              {stat.detail}
+                            </p>
+                          </div>
+                        </div>
                       </div>
 
-                      <div className="w-full md:w-1/2 pl-6 md:text-left mt-6 md:mt-0">
+                      <div className="hidden md:block w-full md:w-1/2 pl-6 md:text-left mt-6 md:mt-0">
                         <div className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg shadow">
                           <h4 className="text-md font-semibold text-indigo-600 mb-2">
                             About {stat.year}
@@ -209,6 +234,7 @@ const Stats = () => {
           </div>
         </div>
       </section>
+
       <section className="bg-teal-700 dark:bg-teal-900 text-white py-8 px-6 rounded-lg max-w-4xl mx-auto text-center my-12">
         <p className="text-lg sm:text-xl font-semibold mb-4">
           Discover the range of expert services we offer to help your business
@@ -223,5 +249,4 @@ const Stats = () => {
     </>
   );
 };
-
 export default Stats;

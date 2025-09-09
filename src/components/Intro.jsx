@@ -4,7 +4,6 @@ const Intro = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-10">
       <div className="flex flex-col md:flex-row items-center gap-10">
-        {/* Image Section */}
         <div className="w-full md:w-1/2">
           <img
             src="https://t3.ftcdn.net/jpg/05/39/65/40/360_F_539654005_M7XZRGAG3TAarymgapSSgSUdgkNKQL2G.jpg"
@@ -13,7 +12,6 @@ const Intro = () => {
           />
         </div>
 
-        {/* Text Section */}
         <div className="w-full md:w-1/2">
           <h3 className="text-2xl sm:text-3xl font-semibold mb-6 text-gray-900 dark:text-white">
             Elevate Your Brand with{" "}

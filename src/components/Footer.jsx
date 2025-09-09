@@ -17,7 +17,6 @@ const Footer = ({ id }) => {
       className="bg-base-200 dark:bg-gray-900 py-10 px-6 sm:px-12"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-gray-700 dark:text-gray-300">
-        {/* About */}
         <div className="flex flex-col justify-start">
           <h3 className="text-xl font-semibold mb-4 text-gray-200 dark:text-white text-left">
             About Weboin
@@ -29,7 +28,6 @@ const Footer = ({ id }) => {
           </p>
         </div>
 
-        {/* Contact Info */}
         <div className="flex flex-col justify-start">
           <h3 className="text-xl font-semibold mb-4 text-gray-200 dark:text-white text-left">
             Contact Us
@@ -56,7 +54,6 @@ const Footer = ({ id }) => {
           </ul>
         </div>
 
-        {/* Social Media */}
         <div className="flex flex-col justify-start">
           <h3 className="text-xl font-semibold mb-4 text-gray-200 dark:text-white text-left">
             Follow Us
@@ -110,11 +107,9 @@ const Footer = ({ id }) => {
           </div>
         </div>
 
-        {/* You could add an extra column or keep it empty for better spacing */}
         <div className="hidden md:block" />
       </div>
 
-      {/* Copyright */}
       <div className="mt-10 border-t border-gray-300 dark:border-gray-700 pt-6 text-center text-gray-300 dark:text-gray-400 text-sm">
         &copy; {new Date().getFullYear()} Weboin. All rights reserved.
       </div>

@@ -4,7 +4,6 @@ const Information = () => {
   return (
     <section className="bg-slate-800 dark:bg-slate-200 py-16 px-4 sm:px-6 rounded-lg max-w-7xl mx-auto mt-20 text-center text-white transition-colors duration-500">
       <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
-        {/* Text Section */}
         <div className="text-center lg:text-left max-w-xl">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 dark:text-black">
             Leading Digital Marketing Agency in India
@@ -25,7 +24,6 @@ const Information = () => {
           </p>
         </div>
 
-        {/* Image Section */}
         <div className="w-full max-w-xl">
           <img
             src="https://digifame.in/wp-content/uploads/2023/12/What-is-Digital-Marketing-768x512-1.jpg"
