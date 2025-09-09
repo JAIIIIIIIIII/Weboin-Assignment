@@ -51,27 +51,37 @@ const portfolioItems = [
 
 const PortfolioPreview = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
-      <h2 className="text-3xl font-bold text-center mb-10">
-        Portfolio Preview
+    <section className="p-10 max-w-6xl mx-auto bg-gray-100 dark:bg-gray-700 rounded-lg my-10 transition-colors duration-500">
+      <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+        PortFolios
       </h2>
-      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-        {portfolioItems.map(({ id, title, image, description }) => (
-          <div
-            key={id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img src={image} alt={title} className="w-full h-48 object-cover" />
-            <div className="p-5">
-              <h3 className="text-xl text-gray-600x font-semibold mb-2">
-                {title}
-              </h3>
-              <p className="text-gray-600 text-sm">{description}</p>
+      <div></div>
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <h2 className="text-3xl font-bold text-center mb-10">
+          Portfolio Preview
+        </h2>
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+          {portfolioItems.map(({ id, title, image, description }) => (
+            <div
+              key={id}
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            >
+              <img
+                src={image}
+                alt={title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-5">
+                <h3 className="text-xl text-gray-600x font-semibold mb-2">
+                  {title}
+                </h3>
+                <p className="text-gray-600 text-sm">{description}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
+          ))}
+        </div>
+      </div>{" "}
+    </section>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Team = () => {
+const Team = ({ id }) => {
   const teamMembers = [
     {
       name: "Ava Thompson",
@@ -45,8 +45,11 @@ const Team = () => {
   ];
 
   return (
-    <section className="p-6 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-700 rounded-lg my-10 transition-colors duration-500">
-      <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white text-center">
+    <section
+      id={id}
+      className=" p-6 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-700 rounded-lg my-10 transition-colors duration-500"
+    >
+      <h2 className="pt-10 text-3xl font-bold mb-8 text-gray-900 dark:text-white text-center">
         Our Team
       </h2>
 

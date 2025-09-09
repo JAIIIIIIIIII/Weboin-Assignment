@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGlobe, FaUsers, FaBriefcase, FaChartLine } from "react-icons/fa";
+import { HashLink } from "react-router-hash-link";
 
 const stats = [
   {
@@ -72,148 +73,154 @@ const yearlyStats = [
 
 const Stats = () => {
   return (
-    <section className="max-w-6xl mx-auto py-12 px-6">
-      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">
-        Company Stats
-      </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        {stats.map((stat, index) => (
-          <div
-            key={index}
-            className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow hover:shadow-lg transition"
-          >
-            <div className="flex items-center justify-center mb-4">
-              <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-full">
-                {stat.icon}
+    <>
+      <section className="max-w-6xl mx-auto py-12 px-6">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">
+          Company Stats
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow hover:shadow-lg transition"
+            >
+              <div className="flex items-center justify-center mb-4">
+                <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-full">
+                  {stat.icon}
+                </div>
               </div>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                {stat.value}
+              </h3>
+              <p className="text-sm text-gray-500 dark:text-gray-300">
+                {stat.label}
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-              {stat.value}
-            </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-300">
-              {stat.label}
-            </p>
-          </div>
-        ))}
-      </div>
-      <h2 className="text-3xl font-bold text-center mt-10 mb-12 text-gray-800 dark:text-white">
-        Growth Journey Year by Year
-      </h2>
-
-      <div className="relative">
-        {/* Center Vertical Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-0.5 h-full bg-gray-300 dark:bg-gray-600 z-0" />
-
-        <div className="space-y-16">
-          {yearlyStats.map((stat, index) => {
-            const isLeft = index % 2 !== 0;
-
-            return (
-              <div
-                key={index}
-                className={`relative w-full flex flex-col md:flex-row items-start ${
-                  isLeft ? "md:justify-start" : "md:justify-end"
-                }`}
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-1/2 top-2 w-6 h-6 bg-indigo-600 rounded-full ring-4 ring-white dark:ring-gray-700 z-10 transform -translate-x-1/2" />
-
-                {/* Left or Right Content Blocks */}
-                {isLeft ? (
-                  <>
-                    {/* Detail Box (left side) */}
-                    <div className="w-full md:w-1/2 pr-6 md:text-right mb-6 md:mb-0">
-                      <div className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg shadow">
-                        <h4 className="text-md font-semibold text-indigo-600 mb-2">
-                          About {stat.year}
-                        </h4>
-                        <p className="text-sm text-gray-700 dark:text-gray-300">
-                          {stat.detail}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Milestone Card (right side) */}
-                    <div className="w-full md:w-1/2 pl-6">
-                      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-                        <img
-                          src={stat.image}
-                          alt={`Milestone ${stat.year}`}
-                          className="w-full h-40 object-cover"
-                        />
-                        <div className="p-5">
-                          <div className="text-sm text-gray-500 dark:text-gray-400 font-semibold uppercase mb-1">
-                            {stat.year}
-                          </div>
-                          <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2">
-                            {stat.milestone}
-                          </h3>
-                          <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                            <li>
-                              <strong>Revenue:</strong> {stat.revenue}
-                            </li>
-                            <li>
-                              <strong>Employees:</strong> {stat.employees}
-                            </li>
-                            <li>
-                              <strong>Clients:</strong> {stat.clients}
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    {/* Milestone Card (left side) */}
-                    <div className="w-full md:w-1/2 pr-6">
-                      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-                        <img
-                          src={stat.image}
-                          alt={`Milestone ${stat.year}`}
-                          className="w-full h-40 object-cover"
-                        />
-                        <div className="p-5">
-                          <div className="text-sm text-gray-500 dark:text-gray-400 font-semibold uppercase mb-1">
-                            {stat.year}
-                          </div>
-                          <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2">
-                            {stat.milestone}
-                          </h3>
-                          <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                            <li>
-                              <strong>Revenue:</strong> {stat.revenue}
-                            </li>
-                            <li>
-                              <strong>Employees:</strong> {stat.employees}
-                            </li>
-                            <li>
-                              <strong>Clients:</strong> {stat.clients}
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Detail Box (right side) */}
-                    <div className="w-full md:w-1/2 pl-6 md:text-left mt-6 md:mt-0">
-                      <div className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg shadow">
-                        <h4 className="text-md font-semibold text-indigo-600 mb-2">
-                          About {stat.year}
-                        </h4>
-                        <p className="text-sm text-gray-700 dark:text-gray-300">
-                          {stat.detail}
-                        </p>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-            );
-          })}
+          ))}
         </div>
-      </div>
-    </section>
+        <h2 className="text-3xl font-bold text-center mt-10 mb-12 text-gray-800 dark:text-white">
+          Growth Journey Year by Year
+        </h2>
+
+        <div className="relative">
+          {/* Center Vertical Line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-0.5 h-full bg-gray-300 dark:bg-gray-600 z-0" />
+
+          <div className="space-y-16">
+            {yearlyStats.map((stat, index) => {
+              const isLeft = index % 2 !== 0;
+
+              return (
+                <div
+                  key={index}
+                  className={`relative w-full flex flex-col md:flex-row items-start ${
+                    isLeft ? "md:justify-start" : "md:justify-end"
+                  }`}
+                >
+                  <div className="absolute left-1/2 top-2 w-6 h-6 bg-indigo-600 rounded-full ring-4 ring-white dark:ring-gray-700 z-10 transform -translate-x-1/2" />
+                  {isLeft ? (
+                    <>
+                      <div className="w-full md:w-1/2 pr-6 md:text-right mb-6 md:mb-0">
+                        <div className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg shadow">
+                          <h4 className="text-md font-semibold text-indigo-600 mb-2">
+                            About {stat.year}
+                          </h4>
+                          <p className="text-sm text-gray-700 dark:text-gray-300">
+                            {stat.detail}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="w-full md:w-1/2 pl-6">
+                        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                          <img
+                            src={stat.image}
+                            alt={`Milestone ${stat.year}`}
+                            className="w-full h-40 object-cover"
+                          />
+                          <div className="p-5">
+                            <div className="text-sm text-gray-500 dark:text-gray-400 font-semibold uppercase mb-1">
+                              {stat.year}
+                            </div>
+                            <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2">
+                              {stat.milestone}
+                            </h3>
+                            <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                              <li>
+                                <strong>Revenue:</strong> {stat.revenue}
+                              </li>
+                              <li>
+                                <strong>Employees:</strong> {stat.employees}
+                              </li>
+                              <li>
+                                <strong>Clients:</strong> {stat.clients}
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="w-full md:w-1/2 pr-6">
+                        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                          <img
+                            src={stat.image}
+                            alt={`Milestone ${stat.year}`}
+                            className="w-full h-40 object-cover"
+                          />
+                          <div className="p-5">
+                            <div className="text-sm text-gray-500 dark:text-gray-400 font-semibold uppercase mb-1">
+                              {stat.year}
+                            </div>
+                            <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2">
+                              {stat.milestone}
+                            </h3>
+                            <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                              <li>
+                                <strong>Revenue:</strong> {stat.revenue}
+                              </li>
+                              <li>
+                                <strong>Employees:</strong> {stat.employees}
+                              </li>
+                              <li>
+                                <strong>Clients:</strong> {stat.clients}
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="w-full md:w-1/2 pl-6 md:text-left mt-6 md:mt-0">
+                        <div className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg shadow">
+                          <h4 className="text-md font-semibold text-indigo-600 mb-2">
+                            About {stat.year}
+                          </h4>
+                          <p className="text-sm text-gray-700 dark:text-gray-300">
+                            {stat.detail}
+                          </p>
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <section className="bg-teal-700 dark:bg-teal-900 text-white py-8 px-6 rounded-lg max-w-4xl mx-auto text-center my-12">
+        <p className="text-lg sm:text-xl font-semibold mb-4">
+          Discover the range of expert services we offer to help your business
+          thrive.
+        </p>
+        <HashLink smooth to="/#services">
+          <button className="bg-gray-100 text-blue-600 font-bold px-6 py-3 rounded shadow hover:bg-gray-100 transition">
+            Explore Our Services
+          </button>
+        </HashLink>
+      </section>
+    </>
   );
 };
 

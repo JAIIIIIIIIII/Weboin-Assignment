@@ -5,9 +5,9 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
-const CTASection = () => {
-  return (
-    <section className="bg-blue-900 dark:bg-blue-900 py-16 px-6 rounded-lg max-w-8xl mx-auto mt-20 text-center text-white">
+const CTASection = () => (
+  <footer className="w-full bg-gray-800 dark:bg-blue-900 py-16 text-center text-white ">
+    <div className="max-w-7xl mx-auto px-6">
       <h2 className="text-3xl font-bold mb-4">
         Ready to Join Our Growth Journey?
       </h2>
@@ -63,8 +63,8 @@ const CTASection = () => {
           <FaFacebookF /> Facebook
         </a>
       </div>
-    </section>
-  );
-};
+    </div>
+  </footer>
+);
 
 export default CTASection;
